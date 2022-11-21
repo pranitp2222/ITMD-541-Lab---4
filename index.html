@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+</head>
+<body>
+    <div class="container mt-3" style="max-height: 50%; max-width: 80%;">
+        <nav class="navbar navbar-light justify-content-between text-center ">
+            <form class="form-inline justify-content-center">
+            <a class="navbar-brand my-2 mb-3 text-center">Weather App</a>
+            <button class="btn btn-outline-info rounded-pill ml-2" type="button" id="cel">Celsius</button>
+            <button class="btn btn-outline-info rounded-pill ml-2" type="button" id="fer">Fahrenheit</button>
+            <button class="btn btn-outline-secondary rounded-pill ml-2" type="button" id="Miles">Miles</button>
+            <button class="btn btn-outline-secondary rounded-pill ml-2" type="button" id="KM">KM</button>
+            </form>
+            
+            <form class="form-inline justify-content-center">
+              <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search" id="search">
+              <button class="btn btn-outline-warning rounded-pill my-2 my-sm-0 ml-2" type="button" id="locbtn"><span class="bi-geo-alt-fill p-2"></span> Location</button>
+              <button class="btn btn-outline-success rounded-pill my-2 my-sm-0 ml-2" type="button" id="searbtn"><span class="bi-search p-2"></span> Search</button>
+            </form>
+          </nav>
+    <div class="card mb-3 radius border bgimg" style="max-width: 100%;">
+        <div class="row g-10">
+          <div class="col-md-4">
+            <img id="mainImg" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" class="img-fluid rounded-start p-2 mx-auto d-block" alt="..." height= 50%; width = 70%;> 
+          </div>
+          
+          <div class="col-md-4">
+            <div class="text-center ">
+            <div class="display-1 text-black mt-5 mr-1 fontsize"><span id="temp">-- </span><sup>o</sup> <span id="tempunit"> F</span></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+           
+            <div class="card-body text-center ">
+                <h2 class="card-title" id="region">Region</h2>
+                <h5 class="card-title">Current Condition : <span id="currentcondition"> Snow </span></h5>
+                <h5 class="card-title">Day/Hour : <span id="dayhour"> Day/Hour </span></h5>
+                <h5 class="card-title">Precip : <span id="Precip"> Precip </span></h5>
+                <h5 class="card-title">Humidity : <span id="humidity"> Humidity </span></h5>
+                <h5 class="card-title">Wind : <span id="wind"> Wind </span> <span id="mesureunit"> Mile/Hr</span></h5>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    <div class="card-group text-center ">
+        <div class="card radius border bgimgchild">
+          <img id="img1" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title mb-4" id="day1">Day</h6>
+            <p class="card-text" id="condition1">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp1">-- </span><sup>o</sup><span id="maxunit1"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp1">-- </span><sup>o</sup><span id="minunit1"> F</span></p>
+          </div>
+        </div>
+        <div class="card radius border bgimgchild">
+          <img id="img2" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title mb-4" id="day2">Day</h6>
+            <p class="card-text" id="condition2">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp2">-- </span><sup>o</sup> <span id="maxunit2"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp2">-- </span><sup>o</sup> <span id="minunit2"> F</span></p>
+          </div>
+        </div>
+        <div class="card radius border bgimgchild">
+            <img id="img3" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+            <div class="card-body">
+            <h6 class="card-title mb-4" id="day3">Day</h6>
+            <p class="card-text" id="condition3">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp3">-- </span><sup>o</sup> <span id="maxunit3"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp3">-- </span><sup>o</sup> <span id="minunit3"> F</span></p>
+              </div>
+          </div>
+          <div class="card radius border bgimgchild">
+            <img id="img4" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title mb-4" id="day4">Day</h6>
+            <p class="card-text" id="condition4">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp4">-- </span><sup>o</sup> <span id="maxunit4"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp4">-- </span><sup>o</sup> <span id="minunit4"> F</span></p>
+              </div>
+          </div>
+          <div class="card radius border bgimgchild">
+            <img id="img5" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title mb-4" id="day5">Day</h6>
+            <p class="card-text" id="condition5">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp5">-- </span><sup>o</sup> <span id="maxunit5"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp5">-- </span><sup>o</sup> <span id="minunit5"> F</span></p>
+              </div>
+          </div>
+          <div class="card radius border bgimgchild">
+            <img id="img6" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+            <div class="card-body">
+            <h6 class="card-title mb-4" id="day6">Day</h6>
+            <p class="card-text" id="condition6">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp6">-- </span><sup>o</sup> <span id="maxunit6"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp6">-- </span><sup>o</sup> <span id="minunit6"> F</span></p>
+              </div>
+          </div>
+          <div class="card radius border bgimgchild">
+            <img id="img7" class="card-img-top p-2" src="https://cdn-icons-png.flaticon.com/512/3767/3767036.png" alt="Card image cap">
+            <div class="card-body">
+            <h6 class="card-title mb-4" id="day7">Day</h6>
+            <p class="card-text" id="condition7">Condition</p>
+            <p class="card-text">Max Temp</p>
+            <p class="card-text"><span id="maxtemp7">-- </span><sup>o</sup> <span id="maxunit7"> F</span></p>
+            <p class="card-text">Min Temp</p>
+            <p class="card-text"><span id="mintemp7">-- </span><sup>o</sup> <span id="minunit7"> F</span></p>
+              </div>
+          </div>
+      </div>
+    </div>
+</body>
+<script src="script.js"> </script>
+</html>

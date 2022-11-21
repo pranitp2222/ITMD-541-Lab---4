@@ -1,0 +1,28 @@
+.radius{
+    border-radius: 25px;
+}
+.button1{
+    width: 10%;
+    position: absolute;
+    margin-left: 44.7%;
+
+}
+.button{
+    width: 20%;
+}
+
+.bgimg{
+    background-image: url(https://m-cdn.phonearena.com/images/article/143515-wide-two_1200/Apple-tests-adding-news-to-the-native-Weather-app-in-iOS-16.2-Beta.jpg);
+}
+
+.bgimgchild{
+    background-image: url(https://images.unsplash.com/photo-1505533321630-975218a5f66f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ybmluZyUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+body{
+    background-color: rgb(236, 250, 212);
+    
+}
+
+.fontsize{
+ font-size: 110px;
+}
